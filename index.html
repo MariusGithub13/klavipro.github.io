@@ -1,0 +1,1161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Klavipro - Premier Klaviyo Partner Agency specializing in email marketing automation for natural healthcare and protein brands on Shopify. Boost your email revenue by 15-30%.">
+    <title>Klavipro - Klaviyo Partner Agency for Natural Healthcare Brands | 15-30% Revenue Growth</title>
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Inter Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary: #10B981;
+            --primary-dark: #0E9F6E;
+            --secondary: #10B981;
+            --dark: #1F2937;
+            --light: #fffcf9;
+            --accent: #F59E0B;
+            --accent-dark: #D97706;
+            --gray: #6B7280;
+            --light-gray: #E5E7EB;
+            --bg-light: #F9FAFB;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            font-size: 18px;
+            line-height: 1.6;
+            color: var(--dark);
+            overflow-x: hidden;
+            background-color: var(--bg-light);
+            scroll-behavior: smooth;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 15px;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: 700;
+            line-height: 1.2;
+            margin-bottom: 1rem;
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+        }
+        
+        h2 {
+            font-size: 2rem;
+        }
+        
+        h3 {
+            font-size: 1.75rem;
+        }
+        
+        h4 {
+            font-size: 1.5rem;
+        }
+        
+        h5 {
+            font-size: 1.25rem;
+        }
+        
+        h6 {
+            font-size: 1.1rem;
+        }
+        
+        p {
+            margin-bottom: 1.25rem;
+        }
+        
+        .bg-gradient-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
+        }
+        
+        .bg-gradient-light {
+            background: linear-gradient(135deg, var(--light) 0%, #ffffff 100%);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary);
+            border-color: var(--primary);
+            padding: 10px 20px;
+            font-weight: 600;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--primary-dark);
+            border-color: var(--primary-dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-accent {
+            background-color: var(--accent);
+            border-color: var(--accent);
+            color: var(--dark);
+            font-weight: 600;
+            font-size: 16px;
+            padding: 10px 20px;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-accent:hover {
+            background-color: var(--accent-dark);
+            border-color: var(--accent-dark);
+            color: var(--dark);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-card {
+            background: white;
+            border-radius: 16px;
+            padding: 20px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            text-align: center;
+            margin: 0 10px 15px;
+            border: 2px solid var(--secondary);
+            position: relative;
+        }
+        
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+        }
+        
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 800;
+            line-height: 1;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+            color: var(--primary);
+        }
+        
+        .stat-number:after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--accent);
+        }
+        
+        .contact-card {
+            background: white;
+            border-radius: 12px;
+            padding: 20px;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            text-align: center;
+            margin-bottom: 15px;
+            color: var(--dark);
+            border: 2px solid var(--secondary);
+        }
+        
+        .contact-card .feature-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(16, 185, 129, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            color: var(--primary);
+            font-size: 20px;
+        }
+        
+        .contact-card h3 {
+            font-size: 1.25rem;
+            margin-bottom: 5px;
+        }
+        
+        .contact-card p {
+            font-size: 1rem;
+            margin-bottom: 0;
+        }
+        
+        .highlight-box {
+            background-color: white;
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 0 8px 8px 0;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border: 2px solid var(--secondary);
+        }
+        
+        .highlight-box p {
+            margin-bottom: 0;
+            font-size: 18px;
+        }
+        
+        .market-card {
+            background-color: white;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            height: 100%;
+            border: 2px solid var(--secondary);
+        }
+        
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            background-color: rgba(16, 185, 129, 0.1);
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            color: var(--primary);
+            font-size: 20px;
+        }
+        
+        .hero-title {
+            font-size: clamp(2rem, 5vw, 2.5rem);
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        
+        .section-title {
+            font-size: clamp(1.5rem, 4vw, 2rem);
+            margin-bottom: 1rem;
+        }
+        
+        .section-subtitle {
+            font-size: 1.25rem;
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.75rem;
+        }
+        
+        .text-gradient {
+            background: linear-gradient(90deg, var(--primary) 0%, var(--accent) 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .accordion-button:not(.collapsed) {
+            background-color: rgba(16, 185, 129, 0.05);
+            color: var(--primary);
+            box-shadow: none;
+            font-size: 18px;
+        }
+        
+        .accordion-button {
+            font-size: 18px;
+            padding: 15px;
+        }
+        
+        .accordion-button:focus {
+            box-shadow: none;
+            border-color: rgba(16, 185, 129, 0.25);
+        }
+        
+        .accordion-body {
+            font-size: 18px;
+            padding: 15px;
+        }
+        
+        .section {
+            padding: 50px 0;
+        }
+        
+        .bg-white {
+            background-color: white;
+        }
+        
+        .bg-light {
+            background-color: var(--bg-light);
+        }
+        
+        .bg-dark {
+            background-color: var(--dark);
+        }
+        
+        .bg-primary {
+            background-color: var(--primary);
+        }
+        
+        .market-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        
+        .lead {
+            font-size: 1.1rem;
+            font-weight: 400;
+        }
+        
+        .small, small {
+            font-size: 0.875rem;
+        }
+
+        /* Back to Top Button */
+        #back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 99;
+            width: 50px;
+            height: 50px;
+            border: none;
+            outline: none;
+            background-color: var(--primary);
+            color: white;
+            cursor: pointer;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 18px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #back-to-top:hover {
+            background-color: var(--primary-dark);
+        }
+
+        #back-to-top.show {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        /* Card improvements */
+        .card {
+            border: 2px solid var(--secondary) !important;
+        }
+
+        /* Alert styling */
+        .alert-light-green {
+            background-color: #e6f7e6;
+            border: 1px solid var(--primary);
+            color: #155724;
+            padding: 15px;
+            border-radius: 4px;
+        }
+
+        /* Mobile optimizations */
+        @media (max-width: 767.98px) {
+            body {
+                font-size: 16px;
+            }
+            
+            .container {
+                padding: 0 10px;
+            }
+            
+            .section {
+                padding: 30px 0;
+            }
+            
+            .hero-title {
+                font-size: 1.75rem;
+                line-height: 1.3;
+            }
+            
+            .stat-card {
+                padding: 20px 10px;
+                margin: 0 0 10px;
+            }
+            
+            .btn {
+                width: 100%;
+                margin-bottom: 10px;
+                font-size: 16px;
+            }
+            
+            .d-flex.flex-sm-row {
+                flex-direction: column !important;
+            }
+            
+            .market-card {
+                padding: 10px;
+            }
+            
+            .section-title {
+                font-size: 1.5rem;
+            }
+            
+            .lead {
+                font-size: 1rem;
+            }
+            
+            .hero-image {
+                order: -1;
+                margin-bottom: 1.5rem;
+            }
+            
+            .highlight-box {
+                padding: 15px;
+            }
+            
+            .accordion-button {
+                font-size: 16px;
+                padding: 12px;
+            }
+            
+            .accordion-body {
+                font-size: 16px;
+                padding: 12px;
+            }
+
+            /* Move icons to top on mobile */
+            .feature-icon {
+                margin: 0 auto 15px;
+            }
+
+            /* Align image with top of text */
+            .hero-image img {
+                margin-top: 0;
+                align-self: flex-start;
+            }
+        }
+    </style>
+    
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ProfessionalService",
+      "name": "Klavipro",
+      "image": "https://yourusername.github.io/images/logo.png",
+      "@id": "https://yourusername.github.io",
+      "url": "https://yourusername.github.io",
+      "telephone": "+40721269312",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "",
+        "addressLocality": "",
+        "addressRegion": "",
+        "postalCode": "",
+        "addressCountry": ""
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 0,
+        "longitude": 0
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "09:00",
+        "closes": "17:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/klavipro",
+        "https://www.linkedin.com/company/klavipro"
+      ]
+    }
+    </script>
+</head>
+<body>
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Hero Section -->
+        <section class="hero section">
+            <div class="row align-items-start">
+                <div class="col-lg-6">
+                    <h2 class="hero-title mb-3">Unlock Klaviyo's Full Potential for Your Natural Healthcare Brand</h2>
+                    <p class="lead mb-3">We are your dedicated Klaviyo Partner Agency transforming subscribers into revenue machines with hyper-targeted automation.</p>
+                    <p class="mb-3">We don't just manage your email campaigns—we engineer and automate them to drive measurable growth and get maximum ROI from every subscriber on your list.</p>
+                    <div class="d-flex flex-column flex-sm-row gap-2">
+                        <a href="https://calendly.com/devaland/30min" class="btn btn-primary rounded-pill">Book Free Klaviyo Audit</a>
+                        <a href="case-studies.html" class="btn btn-primary rounded-pill">See Case Studies</a>
+                    </div>
+                </div>
+                <div class="col-lg-6 hero-image">
+                    <img src="images/hero-image.webp" alt="Boost Your Shopify Revenue with Klaviyo Email Automation" class="img-fluid rounded-4 shadow">
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Section -->
+        <section class="section bg-light" id="results">
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title">Proven Results for Natural Healthcare Brands</h2>
+                    <p class="lead">Our data-driven approach delivers measurable growth for your email marketing</p>
+                </div>
+            </div>
+            <div class="row g-3 justify-content-center">
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <div class="stat-number mb-3">122%</div>
+                        <h3 class="h5">Average ROI</h3>
+                        <p class="mb-0">From email marketing for our clients</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <div class="stat-number mb-3">23x</div>
+                        <h3 class="h5">Higher Conversion</h3>
+                        <p class="mb-0">For welcome emails compared to industry average</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="stat-card">
+                        <div class="stat-number mb-3">98%</div>
+                        <h3 class="h5">Client Retention</h3>
+                        <p class="mb-0">Rate with ongoing optimization</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Market Opportunity -->
+        <section class="section bg-light" id="services">
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-10 text-center">
+                    <h2 class="section-title" data-aos="fade-up">Dominate Klaviyo Email Conversions for Natural Healthcare & Protein Brands on Shopify</h2>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="100">Specializing in US, CA, AU, NZ, and UK markets where health-focused e-commerce is booming</p>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="col-lg-10 mx-auto">
+                    <div class="highlight-box" data-aos="fade-up">
+                        <p class="mb-0"><strong>Email marketing delivers the highest ROI</strong> among all marketing channels including social media, paid search ads, and affiliate marketing when executed with precision segmentation and automation.</p>
+                    </div>
+                    
+                    <p data-aos="fade-up" data-aos-delay="100">At Klavipro, we empower natural healthcare and protein product suppliers on Shopify to unlock <strong>15-30% higher email revenue</strong> through our hyper-targeted Klaviyo automation strategies. As your niche experts, we focus exclusively on English-speaking markets where health-conscious consumers are driving e-commerce growth.</p>
+                    
+                    <h3 class="section-subtitle mt-4" data-aos="fade-up">Your $131.8 Billion Market Opportunity</h3>
+                    <p data-aos="fade-up" data-aos-delay="100">We've been serving Shopify merchants in natural healthcare, vitamins, protein powders, and organic supplements since 2020, helping them capture their share of this massive market.</p>
+                    
+                    <div class="row g-3 mt-3" data-aos="fade-up">
+                        <div class="col-md-6 col-lg-3">
+                            <div class="market-card">
+                                <div class="market-value">$115B</div>
+                                <p class="mb-0 fw-medium">US Market</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="market-card">
+                                <div class="market-value">$6B</div>
+                                <p class="mb-0 fw-medium">Canada Market</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="market-card">
+                                <div class="market-value">$3.8B</div>
+                                <p class="mb-0 fw-medium">Australia Market</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-lg-3">
+                            <div class="market-card">
+                                <div class="market-value">$6.3B</div>
+                                <p class="mb-0 fw-medium">UK Market</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="mt-3" data-aos="fade-up">
+                        <p class="small text-muted">* Estimated Shopify-driven revenue in target niches.<br>
+                        * Data sourced from 2023 market reports: IBISWorld, Statista, and Shopify ecosystem analytics.</p>
+                    </div>
+                    
+                    <div class="text-center mt-4" data-aos="fade-up">
+                        <a href="https://calendly.com/devaland/30min" class="btn btn-primary rounded-pill px-4">Claim Your Share of the $131.8B Market!</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Why Choose Us -->
+        <section class="section bg-light" id="about">
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title" data-aos="fade-up">Why Choose Klavipro as Your Klaviyo Partner Agency?</h2>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="100">Niche expertise meets technical excellence</p>
+                </div>
+            </div>
+            
+            <div class="row g-3">
+                <div class="col-lg-6" data-aos="fade-up">
+                    <div class="highlight-box">
+                        <div class="d-flex mb-3">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div>
+                                <h3 class="h5">Niche Mastery</h3>
+                                <p class="mb-0">We speak the language of wellness brands. From organic supplements to plant-based proteins, we know what makes your customers click.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex mb-3">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-robot"></i>
+                            </div>
+                            <div>
+                                <h3 class="h5">Klaviyo-Centric Automation</h3>
+                                <p class="mb-0">Cart abandonment sequences that recover 15%+ revenue, post-purchase upsell triggers, and lifecycle campaigns that boost LTV by 30%.</p>
+                            </div>
+                        </div>
+                        
+                        <div class="d-flex">
+                            <div class="feature-icon me-3">
+                                <i class="fas fa-chart-line"></i>
+                            </div>
+                            <div>
+                                <h3 class="h5">Data-Backed Results</h3>
+                                <p class="mb-0">Clients average a 5.3x ROI within 90 days of implementation. You retain full ownership of your Klaviyo account and all our work.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+                    <h3 class="section-subtitle">Ideal for Brands Who Want:</h3>
+                    
+                    <div class="card border-0 shadow-sm mb-3">
+                        <div class="card-body">
+                            <div class="d-flex align-items-start">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-2 me-3">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h6 mb-1">Hyper-Personalized Flows</h4>
+                                    <p class="mb-0 small">Segment by health goals (weight management, muscle gain, holistic wellness) for maximum relevance.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card border-0 shadow-sm mb-3">
+                        <div class="card-body">
+                            <div class="d-flex align-items-start">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-2 me-3">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h6 mb-1">Scalable Growth</h4>
+                                    <p class="mb-0 small">Turn one-time buyers into loyal advocates with automated post-purchase nurture sequences.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="card border-0 shadow-sm">
+                        <div class="card-body">
+                            <div class="d-flex align-items-start">
+                                <div class="bg-primary bg-opacity-10 text-primary rounded-circle p-2 me-3">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <div>
+                                    <h4 class="h6 mb-1">Compliance Confidence</h4>
+                                    <p class="mb-0 small">GDPR/SPAM act-proof campaigns designed specifically for sensitive health niches.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-3">
+                        <a href="https://calendly.com/devaland/30min" class="btn btn-primary rounded-pill px-4">Book Your Free Audit Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Revenue Gap -->
+        <section class="section bg-light">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <h2 class="section-title" data-aos="fade-up">The Email Revenue Gap You Can't Afford to Ignore</h2>
+                    <p data-aos="fade-up" data-aos-delay="100">Most natural healthcare brands are leaving <strong>25-45% of potential email revenue</strong> on the table with suboptimal Klaviyo setups. Every day without optimized flows costs you real money.</p>
+                    
+                    <div class="highlight-box mt-3" data-aos="fade-up">
+                        <p class="mb-0"><strong>Example:</strong> If your store earns $100K monthly, you're likely missing out at least $25,000 to $45,000 in email marketing potential each month. Our clients typically recover this gap within 60-90 days.</p>
+                    </div>
+                    
+                    <div class="row g-3 mt-4">
+                        <div class="col-md-6" data-aos="fade-up">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="feature-icon mb-3 mx-auto">
+                                        <i class="fas fa-exclamation-triangle"></i>
+                                    </div>
+                                    <h3 class="h5 text-center">Common Problems We Fix</h3>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="fas fa-times text-danger me-2"></i> Generic, non-segmented broadcasts</li>
+                                        <li class="mb-2"><i class="fas fa-times text-danger me-2"></i> Incomplete or missing automation flows</li>
+                                        <li class="mb-2"><i class="fas fa-times text-danger me-2"></i> Poor post-purchase nurture sequences</li>
+                                        <li class="mb-2"><i class="fas fa-times text-danger me-2"></i> Weak abandoned cart recovery</li>
+                                        <li class="mb-2"><i class="fas fa-times text-danger me-2"></i> No subscriber win-back strategy</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-body">
+                                    <div class="feature-icon mb-3 mx-auto">
+                                        <i class="fas fa-check-circle"></i>
+                                    </div>
+                                    <h3 class="h5 text-center">Our Performance Solutions</h3>
+                                    <ul class="list-unstyled">
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Health-goal based segmentation</li>
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Complete 12-flow automation suite</li>
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Scientific supplement recommendation sequences</li>
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> 3-stage abandoned cart recovery</li>
+                                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i> Reactivation campaigns for lapsed buyers</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Klaviyo Partners -->
+        <section class="section bg-light" id="audit">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title" data-aos="fade-up">We Are Official Klaviyo Agency Partners</h2>
+                    <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">Limited-Time Offer: Free Klaviyo Performance Audit ($1,500 Value)</p>
+                    
+                    <div class="row justify-content-center">
+                        <div class="col-lg-10">
+                            <div class="card bg-white text-dark mb-4" data-aos="fade-up">
+                                <div class="card-body p-3">
+                                    <p class="mb-0">For a limited time, our team of Klaviyo specialists will conduct a comprehensive audit of your current email marketing setup. This offer is for ambitious natural healthcare brands ready to become our next success story.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="alert alert-light-green d-inline-block" data-aos="fade-up" data-aos-delay="150">
+                        <p class="mb-0"><strong>Limited availability:</strong> We only accept 2 new clients each month to ensure exceptional service quality.</p>
+                    </div>
+                    
+                    <div class="mt-4" data-aos="fade-up" data-aos-delay="200">
+                        <a href="https://calendly.com/devaland/30min" class="btn btn-primary rounded-pill px-4">Book Your Free Audit Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- What You Get -->
+        <section class="section bg-light">
+            <div class="row justify-content-center mb-4">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title" data-aos="fade-up">What You'll Receive in Your Free Audit</h2>
+                    <p class="lead" data-aos="fade-up" data-aos-delay="100">Actionable insights to transform your email revenue</p>
+                </div>
+            </div>
+            
+            <div class="row g-3">
+                <div class="col-md-6 col-lg-4" data-aos="fade-up">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-3">
+                            <div class="feature-icon mx-auto mb-3">
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <h3 class="h5">Complete Flow Analysis</h3>
+                            <p class="mb-0">Detailed review of all automation flows with conversion benchmarking against industry standards.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-3">
+                            <div class="feature-icon mx-auto mb-3">
+                                <i class="fas fa-lightbulb"></i>
+                            </div>
+                            <h3 class="h5">Revenue Opportunities</h3>
+                            <p class="mb-0">Identified gaps and actionable recommendations for immediate revenue improvement.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-3">
+                            <div class="feature-icon mx-auto mb-3">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3 class="h5">Segmentation Review</h3>
+                            <p class="mb-0">Subscriber segmentation analysis and optimization plan for better targeting.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="50">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-3">
+                            <div class="feature-icon mx-auto mb-3">
+                                <i class="fas fa-vial"></i>
+                            </div>
+                            <h3 class="h5">Testing Strategy</h3>
+                            <p class="mb-0">Custom split testing strategy to maximize engagement and conversions.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="150">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-3">
+                            <div class="feature-icon mx-auto mb-3">
+                                <i class="fas fa-user-tag"></i>
+                            </div>
+                            <h3 class="h5">Personalization Audit</h3>
+                            <p class="mb-0">Identification of missed personalization opportunities in your current flows.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="250">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body text-center p-3">
+                            <div class="feature-icon mx-auto mb-3">
+                                <i class="fas fa-chart-pie"></i>
+                            </div>
+                            <h3 class="h5">Performance Forecast</h3>
+                            <p class="mb-0">Projected revenue impact from implementing our recommendations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row mt-4">
+                <div class="col-lg-8 mx-auto">
+                    <div class="card border-0 bg-white" data-aos="fade-up">
+                        <div class="card-body p-3">
+                            <h3 class="h4 text-center mb-3">Why This Matters Now</h3>
+                            <p>The difference between an average Klaviyo account setup and an optimized one isn't just incremental—it's transformational. Our clients typically see:</p>
+                            <ul class="list-unstyled">
+                                <li class="mb-2"><i class="fas fa-arrow-up text-success me-2"></i> <strong>15-30% increase</strong> in email-driven revenue</li>
+                                <li class="mb-2"><i class="fas fa-arrow-up text-success me-2"></i> <strong>2x-4x improvement</strong> in abandoned cart recovery</li>
+                                <li class="mb-2"><i class="fas fa-arrow-down text-success me-2"></i> <strong>Reduced unsubscribe rates</strong> through better targeting</li>
+                                <li class="mb-0"><i class="fas fa-arrow-up text-success me-2"></i> <strong>20-40% higher</strong> customer lifetime value</li>
+                            </ul>
+                        </div>
+                    </div>
+                    
+                    <div class="text-center mt-4" data-aos="fade-up">
+                        <a href="https://calendly.com/devaland/30min" class="btn btn-primary rounded-pill px-4">Get Your Free Klaviyo Audit</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards -->
+        <section class="section bg-light">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title" data-aos="fade-up">Industry Recognition</h2>
+                    <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">Celebrating our achievements in marketing automation excellence</p>
+                </div>
+            </div>
+            
+            <div class="row g-3">
+                <div class="col-md-6" data-aos="fade-up">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-3">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <div class="bg-primary bg-opacity-10 text-primary rounded-3 p-2">
+                                        <i class="fas fa-trophy fa-lg"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h5">Stellar Business Award 2024</h3>
+                                    <p class="mb-0">Recognized as <strong><a href="https://stellarbusiness.com/devaland-marketing-srl/" target="_blank" rel="noopener noreferrer">The Best Marketing & Automation Agency</a></strong> in the USA, UK, and Australia for our innovative Klaviyo implementations.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="card h-100 border-0 shadow-sm">
+                        <div class="card-body p-3">
+                            <div class="d-flex">
+                                <div class="me-3">
+                                    <div class="bg-primary bg-opacity-10 text-primary rounded-3 p-2">
+                                        <i class="fas fa-newspaper fa-lg"></i>
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 class="h5">Featured in New York Weekly</h3>
+                                    <p class="mb-0">Published article: <strong><a href="https://nyweekly.com/tech/marius-andronie-founder-of-devaland-marketing-agency-driving-growth-in-high-tech-automation-marketing/" target="_blank" rel="noopener noreferrer">Driving Growth in High-Tech Automation Marketing</a></strong> highlighting our unique approach to email revenue optimization.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section bg-light">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title" data-aos="fade-up">Frequently Asked Questions</h2>
+                    <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">Get answers to common questions about our Klaviyo services</p>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <div class="accordion" id="faqAccordion">
+                        <div class="accordion-item border-0 shadow-sm mb-2" data-aos="fade-up">
+                            <h3 class="accordion-header" id="headingOne">
+                                <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                                    How quickly can I expect to see results?
+                                </button>
+                            </h3>
+                            <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Most clients see measurable improvements within the first 30 days as we implement critical optimizations. The full impact typically becomes evident within 90 days as all automation flows mature and subscriber segmentation takes effect.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item border-0 shadow-sm mb-2" data-aos="fade-up" data-aos-delay="50">
+                            <h3 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    Do I need to migrate my existing Klaviyo account?
+                                </button>
+                            </h3>
+                            <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>No, we work directly within your existing Klaviyo account. You maintain complete ownership and control at all times. Our team is added as agency partners with the appropriate permissions to implement optimizations.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item border-0 shadow-sm mb-2" data-aos="fade-up" data-aos-delay="100">
+                            <h3 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    What makes you different from other Klaviyo agencies?
+                                </button>
+                            </h3>
+                            <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Three key differentiators:</p>
+                                    <ol>
+                                        <li><strong>Niche specialization:</strong> We exclusively serve natural healthcare and protein brands, giving us deep understanding of your customers.</li>
+                                        <li><strong>Proprietary frameworks:</strong> Our 12-flow automation system is specifically designed for supplement brands.</li>
+                                        <li><strong>Performance guarantee:</strong> We're so confident in our approach that we offer measurable ROI guarantees for qualified clients.</li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item border-0 shadow-sm mb-2" data-aos="fade-up" data-aos-delay="150">
+                            <h3 class="accordion-header" id="headingFour">
+                                <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    How do you handle compliance for health products?
+                                </button>
+                            </h3>
+                            <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>All our campaigns are built with compliance as a foundation:</p>
+                                    <ul>
+                                        <li>FDA disclaimer integration for US brands</li>
+                                        <li>EFSA compliance for European markets</li>
+                                        <li>TGA requirements for Australia</li>
+                                        <li>Proper health claim structuring</li>
+                                        <li>Mandatory unsubscribe options</li>
+                                    </ul>
+                                    <p class="mb-0">We stay current on all regulatory changes affecting supplement marketing.</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="accordion-item border-0 shadow-sm" data-aos="fade-up" data-aos-delay="200">
+                            <h3 class="accordion-header" id="headingFive">
+                                <button class="accordion-button collapsed rounded-3" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    What's included in your ongoing management?
+                                </button>
+                            </h3>
+                            <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#faqAccordion">
+                                <div class="accordion-body">
+                                    <p>Our comprehensive management includes:</p>
+                                    <ul>
+                                        <li>Weekly performance analysis and reporting</li>
+                                        <li>Monthly flow optimization</li>
+                                        <li>Quarterly segmentation refinement</li>
+                                        <li>Continuous A/B testing</li>
+                                        <li>Seasonal campaign planning</li>
+                                        <li>Dedicated account manager</li>
+                                        <li>Priority support</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Final CTA -->
+        <section class="section bg-light" id="contact">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center">
+                    <h2 class="section-title mb-3" data-aos="fade-up">Ready to Transform Your Email Revenue?</h2>
+                    <p class="lead mb-4" data-aos="fade-up" data-aos-delay="100">Schedule your free Klaviyo audit today and discover your untapped revenue potential.</p>
+                    
+                    <div class="row g-3 justify-content-center mb-4">
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="150">
+                            <div class="contact-card">
+                                <div class="feature-icon">
+                                    <i class="fas fa-phone-alt"></i>
+                                </div>
+                                <h3>Call Us</h3>
+                                <p class="mb-1">+40 (721) 269 312</p>
+                                <p class="mb-0 small text-muted">Mon-Fri, 9am-5pm EST</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                            <div class="contact-card">
+                                <div class="feature-icon">
+                                    <i class="fab fa-whatsapp"></i>
+                                </div>
+                                <h3>WhatsApp</h3>
+                                <p class="mb-1">+40 (721) 269 312</p>
+                                <p class="mb-0 small text-muted">24/7 messaging</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div data-aos="fade-up" data-aos-delay="250">
+                        <a href="https://calendly.com/devaland/30min" class="btn btn-primary rounded-pill px-4">Get Your Free Klaviyo Audit Now</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="back-to-top" aria-label="Back to top">
+        <i class="fas fa-arrow-up"></i>
+    </button>
+
+    <!-- Bootstrap 5 JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <!-- Custom Scripts -->
+    <script>
+        // Initialize AOS
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+        
+        // Back to Top Button
+        const backToTopButton = document.getElementById('back-to-top');
+        
+        window.addEventListener('scroll', function() {
+            if (window.pageYOffset > 300) {
+                backToTopButton.classList.add('show');
+            } else {
+                backToTopButton.classList.remove('show');
+            }
+        });
+        
+        backToTopButton.addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                if (this.getAttribute('href') === '#') return;
+                
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                    
+                    // Update URL without adding to history
+                    if (history.pushState) {
+                        history.replaceState(null, null, targetId);
+                    } else {
+                        window.location.hash = targetId;
+                    }
+                }
+            });
+        });
+
+        // Simple image lazy loading
+        document.addEventListener("DOMContentLoaded", function() {
+            const lazyImages = [].slice.call(document.querySelectorAll("img[data-src]"));
+            
+            if ("IntersectionObserver" in window) {
+                let lazyImageObserver = new IntersectionObserver(function(entries, observer) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            let lazyImage = entry.target;
+                            lazyImage.src = lazyImage.dataset.src;
+                            lazyImage.removeAttribute("data-src");
+                            lazyImageObserver.unobserve(lazyImage);
+                        }
+                    });
+                });
+                
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImageObserver.observe(lazyImage);
+                });
+            } else {
+                // Fallback for browsers without IntersectionObserver
+                lazyImages.forEach(function(lazyImage) {
+                    lazyImage.src = lazyImage.dataset.src;
+                    lazyImage.removeAttribute("data-src");
+                });
+            }
+        });
+    </script>
+</body>
+</html>
